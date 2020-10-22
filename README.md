@@ -9,7 +9,7 @@ Currently, there is no documentation except this Readme file and the API samples
 - Most of the samples are .NET framework console application.
 - Samples are kept as simple as possible so the counstructs like try/catch etc. are usually omitted.
 - NetLimiter nuget package (the API) is added to each project.
-- For security reasons, application must run elevated in order to successfully connect to NetLimiter service. It's possible to disable this requirement (see below).
+- For security reasons, application must run elevated in order to modify NetLimiter service settings. It's possible to disable this requirement (see below).
 
 ## How to create project in Visual Studio
 1. Create .NET framework project
@@ -20,7 +20,7 @@ Currently, there is no documentation except this Readme file and the API samples
 - Currently NetLimiter nuget package has dependency on NLog logging library. The dependency will be removed soon.
 - **NetLimiter 4.1.1** or later must be installed on the machine you are connecting to (usually local machine).
 
-## How to allow non-elevated client to connect to the NetLimiter service
+## How to allow non-elevated client to modify NetLimiter settings
 In NetLimiter [configuration file](https://netlimiter.com/docs/internals/xml-configuration-file) set ***RequireElevationLocal*** to false:
 
       <RequireElevationLocal>false</RequireElevationLocal>
