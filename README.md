@@ -17,7 +17,7 @@ Currently, there is no documentation except this Readme file and the API samples
 3. Use the API (check our samples)
 
 ## About the NetLimiter nuget package
-https://www.nuget.org/packages/NetLimiter/4.1.1
+https://www.nuget.org/packages/NetLimiter
 - Currently NetLimiter nuget package has dependency on NLog logging library. The dependency will be removed soon.
 - **NetLimiter 4.1.1** or later must be installed on the machine you are connecting to (usually local machine).
 
