@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnterRegistrationData
+namespace NLApiSamples
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             using (NLClient client = new NLClient())
             {
@@ -23,7 +23,7 @@ namespace EnterRegistrationData
 
                 try
                 {
-                    client.SetRegistrationData("Registration name", "AAAAA-BBBBB-AAAAA-BBBBB-AAAAA");
+                    await client.SetRegistrationCodeAsync("AAAAA-BBBBB-AAAAA-BBBBB-AAAAA");
 
                     Console.WriteLine($"After registration: IsRegistered={client.License.IsRegistered}");
 
@@ -45,7 +45,7 @@ namespace EnterRegistrationData
         {
             if (sender is NLClient client)
             {
-                Console.WriteLine($"OnLicenseChanged: IsRegistered={client.License.IsRegistered}, RegName={client.License.RegistrationName}");
+                Console.WriteLine($"OnLicenseChanged: IsRegistered={client.License.IsRegistered}, DaysLeft={client.License.DaysLeft}");
             }
         }
     }

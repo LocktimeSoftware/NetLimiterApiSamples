@@ -22,7 +22,7 @@ namespace NLApiSamples
                 {
                     foreach (var request in client.FirewallRequests)
                     {
-                        // Reply to all request, by returning BLOCK
+                        // Reply to all requests, by returning BLOCK
                         client.ReplyFirewallRequest(request, FwAction.Block);
 
                         Console.WriteLine(

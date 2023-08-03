@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LimitForComputer
+namespace NLApiSamples
 {
     class Program
     {
@@ -21,13 +21,13 @@ namespace LimitForComputer
                 filter.Functions.Add(new FFPathEqual("*\\chrome.exe"));
 
                 // Add the filter to the NetLimiter service
-                client.AddFilter(filter);
+                filter = client.AddFilter(filter);
 
                 // Create ALLOW rule
                 Rule rule = new FwRule(RuleDir.Both, FwAction.Allow);
 
                 // Add the rule to the NetLimiter service
-                client.AddRule(filter.Id, rule);
+                rule = client.AddRule(filter.Id, rule);
 
                 Console.WriteLine("Press any key to update the filter and rule");
                 Console.ReadKey();

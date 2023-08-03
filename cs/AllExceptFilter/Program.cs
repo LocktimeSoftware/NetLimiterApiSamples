@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using NetLimiter.Service;
 using CoreLib.Net;
 
-namespace FiltersAndRules
+namespace NLApiSamples
 {
     class Program
     {
