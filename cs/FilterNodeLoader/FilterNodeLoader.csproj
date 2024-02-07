@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C90C1A56-95BD-499F-9792-FB9A41C4345F}</ProjectGuid>
+    <ProjectGuid>{2D831DEF-FD40-4AC7-8379-6A6146496A73}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AllExceptFilter</RootNamespace>
-    <AssemblyName>AllExceptFilter</AssemblyName>
+    <RootNamespace>FilterNodeLoader</RootNamespace>
+    <AssemblyName>FilterNodeLoader</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
