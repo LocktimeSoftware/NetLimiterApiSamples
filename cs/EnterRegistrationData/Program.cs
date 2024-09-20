@@ -23,7 +23,7 @@ namespace NLApiSamples
 
                 try
                 {
-                    await client.SetRegistrationCodeAsync("AAAAA-BBBBB-AAAAA-BBBBB-AAAAA");
+                    await client.SetRegistrationCodeAsync("FBT7X-BDGTY-JLYKL-4NDFJ-W5Q1E");
 
                     Console.WriteLine($"After registration: IsRegistered={client.License.IsRegistered}");
 
