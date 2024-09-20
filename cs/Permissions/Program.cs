@@ -9,7 +9,7 @@ namespace NLApiSamples
 {
     internal class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
             using (NLClient client = new NLClient())
             {
@@ -20,12 +20,20 @@ namespace NLApiSamples
                 {
                     var table = client.GetAccessTable().ToList();
 
-                    table.Add(new NetLimiter.Service.Api.AccessTableRow()
+                    var users = table.FirstOrDefault(x => string.Equals(x.Name, "users", 
+                        StringComparison.InvariantCultureIgnoreCase) ||
+                        string.Equals(x.Name, "builtin\\users", StringComparison.InvariantCultureIgnoreCase));
+
+                    if (users == null)
                     {
-                        Name = "pokus",
-                        AllowedRights = NetLimiter.Service.Security.Rights.Monitor,
-                        DeniedRights = NetLimiter.Service.Security.Rights.Control
-                    });
+                        table.Add(users = new NetLimiter.Service.Api.AccessTableRow()
+                        {
+                            Name = "Users",
+                        });
+                    }
+
+                    users.AllowedRights = NetLimiter.Service.Security.Rights.Monitor;
+                    users.DeniedRights = 0;
 
                     client.SetAccessTable(table);
                 }
